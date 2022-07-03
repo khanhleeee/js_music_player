@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Fontawesome -->
+   <script src="https://kit.fontawesome.com/130a4abc8a.js" crossorigin="anonymous"></script>
+   <!-- CSS -->
+   <link rel="stylesheet" href="/assets/css/style.css">
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;600;700&display=swap" rel="stylesheet">
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="app">
+      <div class="dashboard">
+         <div class="song">
+            <div class="song-title">
+               <span>Now playing:</span>
+               <p class="song-name">Vì mẹ anh bắt chia tay</p>
+               <p class="song-singer">Miu Lê - Karik</p>
+               <div class="song-cd">
+                  <div class="song-img" style="background-image:url();">
+                  </div>
+               </div>
+            </div>
+            <div class="features">
+               <div class="repeat-mode">
+                  <i class="fa-solid fa-rotate-right"></i>
+               </div>
+               <div class="back-btn">
+                  <i class="fa-solid fa-caret-left"></i>
+               </div>
+               <div class="play-btn">
+                  <i class="pause-icon fa-solid fa-circle-pause"></i>
+                  <i class="play-icon fa-solid fa-circle-play"></i>
+               </div>
+               <div class="up-btn">
+                  <i class="fa-solid fa-caret-right"></i>
+               </div>
+               <div class="random-mode">
+                  <i class="fa-solid fa-shuffle"></i>
+               </div>
+            </div>
+            <div class="song-progress">
+               <span class="start-time">-:-</span>
+               <input class="song-progress-bar" type="range" value="0" step="1" min="0" max="100">
+               <audio id="song-audio" src=""></audio>
+               <span class="end-time">-:-</span>
+            </div>
+         </div>
+      </div>
+      <div class="song-list">
+      </div>
+   </div>
+
+   <script src="/assets/js/app.js"></script>
+</body>
+
+</html>
