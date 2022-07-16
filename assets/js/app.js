@@ -17,6 +17,8 @@ const backBtn = $('.back-btn');
 const randomBtn = $('.random-mode');
 const repeatBtn = $('.repeat-mode');
 const playList = $('.song-list');
+const startTime = $('.start-time');
+const endTime = $('.end-time');
 
 
 // DATABASE
@@ -107,6 +109,13 @@ const app = {
          cd.style.opacity = newCDWidth/cdWidth;
       } 
 
+      // Khi pause = space btn
+      document.onkeyup = function(e) {
+         e.preventDefault();
+         if(e.which === 32 || e.code === 'Space') {
+            playBtn.click();
+         }
+      }
       // Xử lý play/pause bài hát
       playBtn.onclick = function() {
          if(_this.isPlaying) {
@@ -129,14 +138,30 @@ const app = {
             cdAnimation.pause(); //play animation
          }
       }
-
-      //Xử lý progress bar
+      //Xử lý progress bar và thời gian chạy song
       songAudio.ontimeupdate = function() {
          if(songAudio.duration) {
+            // process bar
             const progress = Math.floor(songAudio.currentTime / songAudio.duration * 100);
             progressBar.value = progress;
             handleProgressBar();
+            // startTime
+            var minutes = Math.floor(songAudio.currentTime / 60);
+            var seconds = Math.round(songAudio.currentTime - minutes * 60);
+            if(seconds < 10) {
+               seconds = '0' + seconds;
+            }
+            startTime.innerText = minutes + ':' + seconds;
          }
+      }
+      songAudio.onloadedmetadata = function() {
+         startTime.innerText = '0' + ':' + '00';
+         var minutes = Math.floor(songAudio.duration / 60);
+         var seconds = Math.round(songAudio.duration - minutes * 60);
+         if(seconds < 10) {
+            seconds = '0' + seconds;
+         }
+         endTime.innerText = minutes + ':' + seconds;
       }
       // Xử lý khi tua
       progressBar.onchange = function(e) {
@@ -144,7 +169,6 @@ const app = {
          const currentTime = (percent/100) * songAudio.duration;
          songAudio.currentTime = currentTime;
       }
-
       // Khi next bai hat
       nextBtn.onclick = function() {
          if(_this.isRandom) {
