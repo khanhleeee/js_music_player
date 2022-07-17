@@ -32,38 +32,38 @@ const app = {
       {
          name: 'Vì mẹ anh bắt chia tay',
          singer: 'MIU LÊ x KARIK x CHÂU ĐĂNG KHOA',
-         path: '/assets/music/song1.mp3',
-         image: '/assets/img/songs/song1.jpg'
+         path: '/js_music_player/assets/music/song1.mp3',
+         image: '/js_music_player/assets/img/songs/song1.jpg'
       },
       {
          name: 'Dễ đến dễ đi',
          singer: 'Quang Hùng Master D',
-         path: '/assets/music/song2.mp3',
-         image: '/assets/img/songs/song2.jpg'
+         path: '/js_music_player/assets/music/song2.mp3',
+         image: '/js_music_player/assets/img/songs/song2.jpg'
       },
       {
          name: 'Sài gòn đau lòng quá',
          singer: 'Hứa Kim Tuyền, Hoàng Duyên',
-         path: '/assets/music/song3.mp3',
-         image: '/assets/img/songs/song3.jpg'
+         path: '/js_music_player/assets/music/song3.mp3',
+         image: '/js_music_player/assets/img/songs/song3.jpg'
       },
       {
          name: 'Big Girls Don\'t Cry',
          singer: 'Tóc Tiên',
-         path: '/assets/music/song4.mp3',
-         image: '/assets/img/songs/song4.jpg'
+         path: '/js_music_player/assets/music/song4.mp3',
+         image: '/js_music_player/assets/img/songs/song4.jpg'
       },
       {
          name: 'The Playah (Special Performance)',
          singer: 'Soobin Hoàng Sơn, SlimV',
-         path: '/assets/music/song5.mp3',
-         image: '/assets/img/songs/song5.jpg'
+         path: '/js_music_player/assets/music/song5.mp3',
+         image: '/js_music_player/assets/img/songs/song5.jpg'
       },
       {
          name: 'Mirror Mirror (Prod. by NINO)',
          singer: 'F.HERO x MILLI Ft. Changbin of Stray Kids',
-         path: '/assets/music/song6.mp3',
-         image: '/assets/img/songs/song6.png'
+         path: '/js_music_player/assets/music/song6.mp3',
+         image: '/js_music_player/assets/img/songs/song6.png'
       }
    ],
    render: function() {
